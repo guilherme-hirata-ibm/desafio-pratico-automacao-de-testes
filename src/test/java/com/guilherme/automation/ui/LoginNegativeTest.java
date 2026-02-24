@@ -20,7 +20,6 @@ public class LoginNegativeTest extends BaseTest {
 
         String error = loginPage.getErrorMessage();
 
-        // Critério de aceite (Excel): mensagem de erro exibida
         assertTrue(error.toLowerCase().contains("do not match"),
                 "Esperava mensagem de erro indicando credenciais inválidas. Mensagem atual: " + error);
     }
