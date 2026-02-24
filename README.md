@@ -52,6 +52,16 @@ mvn clean test
 
 ---
 
+# 📸 Evidência de Execução
+
+### Execução via Maven
+![Execução dos testes](docs/test-run.png)
+
+### Relatório HTML (Surefire)
+[Abrir relatório HTML](evidences/surefire-report.html)
+
+---
+
 # 📂 Estrutura do Projeto
 
 src
