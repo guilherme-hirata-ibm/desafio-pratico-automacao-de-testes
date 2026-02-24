@@ -15,21 +15,21 @@ public class BaseTest {
     void setUp() {
         WebDriverManager.firefoxdriver().setup();
 
-        // Teste CI/CD
         FirefoxOptions options = new FirefoxOptions();
+
         boolean headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
         if (headless) {
             options.addArguments("-headless");
         }
 
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
+        options.addArguments("--width=1920");
+        options.addArguments("--height=1080");
+
+        driver = new FirefoxDriver(options);
     }
 
     @AfterEach
     void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        if (driver != null) driver.quit();
     }
 }
