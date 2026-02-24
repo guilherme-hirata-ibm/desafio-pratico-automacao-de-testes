@@ -1,5 +1,7 @@
 # 🚀 Desafio Prático – Automação de Testes
 
+![CI](https://github.com/guilherme-hirata-ibm/desafio-pratico-automacao-de-testes/actions/workflows/tests.yml/badge.svg)
+
 Projeto desenvolvido como parte de um desafio técnico com foco em:
 
 - Planejamento de cenários
@@ -32,6 +34,9 @@ Projeto desenvolvido como parte de um desafio técnico com foco em:
 - Git
 - GitHub
 
+## 🔹 CI/CD
+- GitHub Actions
+
 ---
 
 # ▶️ Como Executar os Testes
@@ -49,6 +54,35 @@ Projeto desenvolvido como parte de um desafio técnico com foco em:
 ```bash
 mvn clean test
 ```
+
+---
+
+# 🚀 Integração Contínua (CI/CD)
+
+O projeto possui integração contínua configurada com **GitHub Actions**.
+
+## 🔹 O que o pipeline faz:
+
+- Executa automaticamente a cada:
+  - Push na branch `main`
+  - Pull Request
+- Configura ambiente com:
+  - Java 17
+  - Maven
+  - Firefox (Headless)
+- Executa:
+  
+```bash
+mvn clean test -Dheadless=true
+```
+
+## 🔹 Objetivo
+
+- Garantir que:
+
+    - Todos os testes estejam sempre executando com sucesso
+    - O projeto esteja validado automaticamente
+    - A suíte seja executável em ambiente Linux (CI)
 
 ---
 
@@ -129,6 +163,8 @@ src
 - Reutilização de código
 - Esperas explícitas (WebDriverWait)
 - Estrutura organizada e escalável
+- Execução automatizada via CI/CD (GitHub Actions)
+- Execução Headless para compatibilidade com ambiente de integração contínua
 
 ## ✅ Resultados
 - Testes executando com sucesso
