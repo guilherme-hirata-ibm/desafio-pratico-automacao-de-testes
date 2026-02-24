@@ -57,8 +57,8 @@ mvn clean test
 ### Execução via Maven
 ![Execução dos testes](docs/test-run.png)
 
-### Relatório HTML (Surefire)
-[Abrir relatório HTML](evidences/surefire-report.html)
+### Relatório publicado (GitHub Pages)
+[Ver relatório no navegador](https://guilherme-hirata-ibm.github.io/desafio-pratico-automacao-de-testes/)
 
 ---
 
